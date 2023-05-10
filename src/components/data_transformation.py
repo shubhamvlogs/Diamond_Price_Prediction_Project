@@ -1,9 +1,7 @@
-from sklearn.impute import SimpleImputer # Handling Missing Values
-from sklearn.preprocessing import StandardScaler #  Handling Features Scaling
-from sklearn.preprocessing import OrdinalEncoder #Ordianl Encoding
-
-## Pipelines
-
+from sklearn.impute import SimpleImputer ## HAndling Missing Values
+from sklearn.preprocessing import StandardScaler # HAndling Feature Scaling
+from sklearn.preprocessing import OrdinalEncoder # Ordinal Encoding
+## pipelines
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 
@@ -12,10 +10,10 @@ from dataclasses import dataclass
 import pandas as pd
 import numpy as np
 
-
-from src.logger import CustomException
+from src.exception import CustomException
 from src.logger import logging
-from src.utils  import save_object
+
+from src.utils import save_object
 
 
 ## Data Transformation config
