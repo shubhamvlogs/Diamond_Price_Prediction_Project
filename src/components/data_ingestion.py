@@ -5,7 +5,7 @@ from src.exception import CustomException
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-
+from src.components.data_transformation import DataTransformation
 
 ## Initialize the data ingestion configuration
 
@@ -58,4 +58,12 @@ class DataIngestion:
         except Exception as e:
             logging.info('Error occured in Data Ingestion config')
         
+    
+if __name__=='__main__':
+    obj = DataIngestion()
+    
+    tran,test =obj.initiate_data_ingestion()
+    obj2 = DataTransformation()
+    obj2.initiate_data_transformation()
+    
     

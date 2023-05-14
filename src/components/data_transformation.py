@@ -85,8 +85,10 @@ class DataTransformation:
         except Exception as e:
             
             
-            logging.info('Error in Data Transformation')
+            
             raise CustomException(e,sys)
+
+        logging.info('Error in Data Transformation')
                
         
         
@@ -153,7 +155,7 @@ class DataTransformation:
             
             
             
-        
+
         
 
 
